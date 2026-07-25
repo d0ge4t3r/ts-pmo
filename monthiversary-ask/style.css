@@ -1,0 +1,185 @@
+/* ===========================
+   General Page
+=========================== */
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("heart-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+    font-family: "Pixelify Sans", sans-serif;
+    overflow: hidden;
+}
+
+/* ===========================
+   Envelope Screen
+=========================== */
+
+#envelope-container {
+    text-align: center;
+    cursor: pointer;
+}
+
+#envelope-container p {
+    font-size: 28px;
+    color: #6b3c61;
+}
+
+/* Envelope Animation */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#envelope {
+    width: 220px;
+    animation: pulse 1.5s infinite;
+}
+
+/* ===========================
+   Letter Screen
+=========================== */
+
+#letter-container {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================
+   Letter Window
+=========================== */
+
+.letter-window {
+    position: relative;
+
+    width: 750px;
+    height: 560px;
+
+    background: url("Box.png") center no-repeat;
+    background-size: contain;
+
+    transform: scale(.8);
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ===========================
+   Title
+=========================== */
+
+/* Title */
+#letter-title {
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Cats */
+.cat {
+    position: absolute;
+    width: 235px;
+    top: 180px;   /* below the title */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Buttons */
+.buttons {
+    position: absolute;
+    top: 330px;   /* below the cats */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 35px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.buttons {
+    position: absolute;
+
+    top: 340px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 35px;
+}
+
+.btn {
+    width: 130px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform .2s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+
+.no-wrapper {
+    position: relative;
+}
+
+/* ===========================
+   Final Text
+=========================== */
+
+.final-text{
+    display:none;
+
+    position:absolute;
+
+    top:190px;
+
+    left:90%;
+
+    transform:translateX(-50%);
+
+    width:300px;
+
+    background:rgba(255,210,235,.95);
+
+    padding:18px;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.6;
+}
